@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Key places </title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<link href="main.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	
+		<div id="mapid"></div>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script>
+			var mymap = L.map('mapid').setView([42.64, -84.08], 12);
+			L.tileLayer('https://api.mapbox.com/styles/v1/ashiggin/cipg4o8tj000cbsnotd0rd8zr/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXNoaWdnaW4iLCJhIjoiY2lwZzRsYWk1MDAwZ3U5bmpsa3o5dHhmdyJ9.Hy-l0dBpdQxjdZQwPAtkYA', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			maxZoom: 18,
+
+}).addTo(mymap);
+			
+			var marker1 = L.marker([42.67, -84.07]).addTo(mymap);
+			marker1.bindPopup("Where I whent to highschool <br> Fowlerville High School.").openPopup();
+			
+			var marker2 = L.marker([42.60, -84.07]).addTo(mymap);
+			marker2.bindPopup("Closest convienience store <br> Country Way.").openPopup();
+			var marker3 = L.marker([42.59, -84.16]).addTo(mymap);
+			marker3.bindPopup("Rode I lived on<br> Risch Rd.").openPopup();
+		</script>
+		 
+		 
+	</body>
